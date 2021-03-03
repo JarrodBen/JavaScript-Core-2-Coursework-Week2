@@ -1,4 +1,4 @@
-function shoppingList(arrayOfItems) {
+function shoppingList() {
   let content = document.getElementById("content");
   let listUl = document.createElement('ul');
   content.append(listUl)
