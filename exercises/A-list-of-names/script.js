@@ -1,4 +1,4 @@
-function listOfNames(arrayOfPeople) {
+function listOfNames() {
   let content = document.querySelector("#content");
 
 
