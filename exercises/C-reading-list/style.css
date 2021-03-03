@@ -157,3 +157,24 @@ body {
     max-height: 80px;
   }
 }
+
+.haveRead{
+  background-color: rgb(16, 231, 16);
+  width: 300px;
+}
+
+.haveNotRead {
+  background-color: rgb(230, 22, 22);
+  width: 300px;
+}
+
+.readingList {
+  text-align: center;
+  display: flex;
+  padding: 10px;
+}
+
+.bookCover{
+  width: 200px;
+  height: 300px;
+}
