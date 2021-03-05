@@ -1,14 +1,14 @@
-let jumboBtn = document.querySelectorAll(".jumbotron")
-let bikeBtn = document.querySelectorAll(".btn-primary")
-let volBtn = document.querySelectorAll(".btn-secondary")
+let jumboBtn = document.getElementsByClassName("jumbotron")
+let bikeBtn = document.getElementsByClassName("btn-primary")
+let volBtn = document.getElementsByClassName("btn-secondary")
 
-let btnBlue = document.querySelectorAll("#blueBtn")
-let btnOrange = document.querySelectorAll("#orangeBtn")
-let btnGreen = document.querySelectorAll("#greenBtn")
+let btnBlue = document.getElementById("blueBtn")
+let btnOrange = document.getElementById("orangeBtn")
+let btnGreen = document.getElementById("greenBtn")
 
 // Functions for all three themes
-// Function for the blue theme
 
+// Function for the blue theme
 var blueButn = function () {
     jumboBtn[0].style.backgroundColor = "#588fbd"
     bikeBtn[0].style.backgroundColor = "#ffa500"
@@ -19,7 +19,6 @@ var blueButn = function () {
 btnBlue.addEventListener("click", blueButn)
 
 //Function for the orange theme
-
 var orangeButn = function () {
     jumboBtn[0].style.backgroundColor = "#f0ad4e"
     bikeBtn[0].style.backgroundColor = "#5751fd"
@@ -37,3 +36,29 @@ var greenButn = function () {
 }
 
 btnGreen.addEventListener("click", greenButn)
+
+let regForm = document.getElementsByTagName("form")[0]
+let emailField = document.getElementById("exampleInputEmail1")
+let nameField = document.getElementById("example-text-input")
+let textBox = document.getElementById("exampleTextArea")
+let subBtn = document.getElementsByTagName("form")[0][3]
+subBtn.setAttribute("id", "subBtn")
+
+  var submitButn = function (x){
+    x.preventDefault();
+    let registerEg = /@/;
+    for (let y = 0; y < regForm.length-1 ; y++){
+        if (regForm[y].value === ""){
+            regForm[y].style.backgroundColor = "red";
+        } else if (regForm[y] === emailField && registerEg.test(regForm[y].value) === false){
+            regForm[y].style.backgroundColor = "red";
+        } 
+    }
+    if (regForm[0].value.length > 0 && regForm[1].value.length > 0 && regForm[2].value.length > 0 ) {
+        alert("Thank you for filling out this form, have a great day!");
+    }
+
+    regForm.reset();
+}
+
+subBtn.addEventListener('click', submitButn);
