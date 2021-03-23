@@ -31,7 +31,7 @@ btnOrange.addEventListener("click", orangeButn)
 
 //Function for the green theme
 var greenButn = function () {
-    jumboBtn[0].style.backgroundColor = "#87ca8a"
+    jumboTrn[0].style.backgroundColor = "#87ca8a"
     bikeBtn[0].style.backgroundColor = "black"
     volBtn[0].style.backgroundColor = "#8c9c08"
 }

@@ -161,17 +161,20 @@ body {
 .haveRead{
   background-color: rgb(16, 231, 16);
   width: 300px;
+  margin-bottom: 20px;
 }
 
 .haveNotRead {
   background-color: rgb(230, 22, 22);
   width: 300px;
+  margin-bottom: 20px;
 }
 
 .readingList {
   text-align: center;
-  display: flex;
+  display: inline-block;
   padding: 10px;
+  margin: 5px;
 }
 
 .bookCover{

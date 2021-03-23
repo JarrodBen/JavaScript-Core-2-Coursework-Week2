@@ -1,17 +1,17 @@
+let colourDiv = document.getElementById("content");
+let colourP = document.createElement("p");
+
+let colourSelect = document.createElement("select");
+
+let colourSelected = document.createElement("option");
+
 function listOfColours(colours) {
-  let colourDiv = document.getElementById("content");
-  let colourP = document.createElement("p");
-
-  let colourSelect = document.createElement("select");
   colourSelect.name = "colours";
-
   colourDiv.append(colourSelect);
   colourDiv.append(colourP);
-  let noneSelected = document.createElement("option");
-  colourSelect.append(noneSelected);
+  colourSelect.append(colourSelected);
 
   for (let x = 1; x < colours.length+1; x++) {
-    let colourSelected = document.createElement("option");
     colourSelected.value = colours[x - 1];
     colourSelected.textContent = colours[x - 1];
     colourSelect.append(colourSelected);
